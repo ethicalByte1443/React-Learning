@@ -1,0 +1,50 @@
+/* Skill container */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  /* Individual skill box */
+  .skill-box {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .skill-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Skill image */
+  .skill-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #ffffff;
+  }
+  
+  /* Skill text */
+  .skill-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .skill-description {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  

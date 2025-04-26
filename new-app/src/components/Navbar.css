@@ -1,0 +1,89 @@
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Deep navy blue */
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo Styling */
+  .navbar h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f39c12; /* Vibrant gold */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar h2:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    color: #e67e22; /* Lighter gold for hover */
+  }
+  
+  /* Navbar List Styling */
+  .navbar-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin-left: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ecf0f1; /* Light gray for text */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-item:hover {
+    color: #1abc9c; /* Teal hover color */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+  }
+  
+  /* Decorative Hover Effect for Navbar Items */
+  .navbar-item::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #1abc9c; /* Teal underline */
+    transition: width 0.3s ease;
+    margin: 0 auto; /* Center the underline */
+  }
+  
+  .navbar-item:hover::after {
+    width: 100%; /* Expand underline on hover */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .navbar-list {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .navbar-item {
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+  }
+  

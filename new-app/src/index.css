@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Ensure the content layer is above the background */
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/bgpicture.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px) brightness(0.9); /* Blurs the image and dims it slightly */
+  z-index: -1; /* Ensures it stays behind the body content */
+  pointer-events: none; /* Prevents interaction with the background */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for code blocks */
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #ffd700; /* Gold text for code */
+}
