@@ -6,6 +6,8 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  // case 1: run only on first render
   useEffect(() => {
     alert('Hello, world!')
   
@@ -14,10 +16,20 @@ function App() {
     }
   }, [])
 
+  // case 2: run on every render
   useEffect(() => {
-    alert('Count was changed')
+    alert('Run on every render')
     return () => {
 
+    }
+  })
+
+
+  // case 3: run on every render with dependency
+  useEffect(() => {
+    alert('Run on every render with dependency')
+    return () => {
+      
     }
   }, [count])
   
