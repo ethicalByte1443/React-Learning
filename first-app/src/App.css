@@ -1,0 +1,9 @@
+/* Title Styling */
+.title {
+  text-align: center; /* Center the text horizontally */
+  font-size: 2.5rem; /* Adjust font size */
+  font-weight: bold; /* Make the title bold */
+  color: #333; /* Dark gray color for the title */
+  margin: 1rem 0; /* Add vertical spacing */
+  font-family: Arial, sans-serif; /* Ensure a clean font */
+}
