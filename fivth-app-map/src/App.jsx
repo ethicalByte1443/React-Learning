@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -6,15 +6,21 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  const [enablebtncount, setEnablebtncount] = useState(0);
+  const enablebtncount = useRef(1);
   const [btnshow, setBtnshow] = useState(false);
 
+
+  useEffect(() => {
+    console.log("rendering...");
+  })
+
+
   const incrementCount = () => {
-    setEnablebtncount((enablebtncount) => enablebtncount + 1);
-    console.log(enablebtncount);
-    if(enablebtncount == 5){
+    enablebtncount.current = enablebtncount.current + 1;
+    console.log(enablebtncount.current);
+    if(enablebtncount.current == 5){
       setBtnshow(!btnshow);
-      setEnablebtncount(0);
+      enablebtncount.current = 0;
     }
   }
 
