@@ -38,9 +38,9 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <button onClick={() => btnref.current.style.display = 'none'}>
-          Remove Count Button
-        </button>
+        <button onClick={() => btnref.current.style.display = 'none'}>
+            Remove Count Button
+            </button>
     </>
   )
 }
