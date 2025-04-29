@@ -5,13 +5,19 @@ import './App.css'
 // let a = 0;
 function App() {
   const [count, setCount] = useState(0)
+  
+  // useEffect(() => {
+  //   a = a + 1;
+  //   console.log(`Rerendering App component... ${a}`);           // on every count onClick the whole App component rerenders
+  // }) 
+
 
   // using useRef()
   
-  const btnref = useRef();
+  const a = useRef(0);
     useEffect(() => {
-      console.log(`Rerendering `);           // on every count onClick the whole App component rerenders
-      btnref.current.style.backgroundColor = 'cyan';
+      a.current = a.current + 1;
+      console.log(`Rerendering App component... ${a.current}`);           // on every count onClick the whole App component rerenders
     })
 
 
@@ -27,7 +33,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button ref={btnref} onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
@@ -37,10 +43,6 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-
-      <button onClick={() => btnref.current.style.display = 'none'}>
-          Remove Count Button
-        </button>
     </>
   )
 }
